@@ -7,11 +7,7 @@ Biquad Filter implementation in C using Portaudio
 This is a biquad data structure that can be used to create audio filters such as lowpass, highpass, notch, peak, etc.
 There is also an example using Portaudio to test the biquad. The example uses the following diagram:
 
-
-+--------------+		      +---------------+		            +---------------+
-|  Microphone  |------->  |    BiQuad    	|------------->	|    Speaker 	  |
-|    Input     |		      |    Filter			|           	  |    Output     |
-+--------------+		      +---------------+		            +---------------+
+![I/O Block Diagram](http://i.imgur.com/zLmBSEN.jpg)
 
 # Usage
 You must include "Biquad.h" in your source code to be able to use the biquad object.  There are 4 helper functions provided
