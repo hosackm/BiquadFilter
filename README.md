@@ -8,20 +8,16 @@ This is a biquad data structure that can be used to create audio filters such as
 There is also an example using Portaudio to test the biquad. The example uses the following diagram:
 
 
-+--------------+		+---------------+		+---------------+
-|  Microphone  |--------------> |    BiQuad    	|------------->	|    Speaker 	|
-|    Input     |		|    Filter	|		|     Output	|
-+--------------+		+---------------+		+---------------+
++--------------+		      +---------------+		            +---------------+
+|  Microphone  |------->  |    BiQuad    	|------------->	|    Speaker 	  |
+|    Input     |		      |    Filter			|           	  |    Output     |
++--------------+		      +---------------+		            +---------------+
 
 # Usage
 You must include "Biquad.h" in your source code to be able to use the biquad object.  There are 4 helper functions provided
 when including "Biquad.h":
 
-##biquad* bq_new(int filter_type,
-##		float frequency,
-##		float q,
-##		float dbGain,
-##		int sample_rate);
+##biquad* bq_new(int filter_type, float frequency, float q, float dbGain, int sample_rate);
 This function will allocate and initialize a new biquad object.
 
 ##float bq_process(biquad* bq, float input);
